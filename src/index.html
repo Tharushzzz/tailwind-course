@@ -21,6 +21,16 @@
         const itemWidth = carousel.getElementsByTagName("div")[0].clientWidth;
         carousel.scrollLeft = carousel.scrollLeft - itemWidth;
       });
+
+      // Dark mode toggle
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      darkModeToggle.addEventListener('click', () => {
+        if (document.body.classList.toggle('dark')) {
+          document.body.classList.remove('dark');
+        } else {
+          document.body.classList.add('dark');
+        }
+      });
     });
   </script>
 
@@ -29,6 +39,10 @@
 <body>
   <main class="bg-zinc-200 dark:bg-zinc-900">
     <header class="text-zinc-200">
+      <button id="dark-mode-toggle" class="fixed top-24 right-0 inline-block cursor-pointer rounded-l-lg bg-zinc-900 dark:bg-zinc-200 text-zinc-200 dark:text-zinc-900 p-2 text-3xl">
+        <i class="fas fa-sun dark:hidden"></i>
+        <i class="fas-solid fa-moon hidden dark:inline"></i>
+      </button>
       <nav class="sticky top-0 flex bg-linear-to-r from-rose-500 to-pink-500 z-1">
         <div class="flex items-center p-2 gap-2">
           <img src="./assets/images/logo-inverted.png" alt="" width="50"> 
