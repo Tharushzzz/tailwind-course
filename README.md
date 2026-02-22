@@ -55,5 +55,3 @@ git clone https://github.com/tharushzzz/music-festival.git
 
 cd music-festival/src
 
-
-## 📂 Project Structure
