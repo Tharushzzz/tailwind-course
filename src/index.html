@@ -23,7 +23,7 @@
       });
 
       // Dark mode toggle
-      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      const darkModeToggle = document.getElementById("dark-mode-toggle");
       darkModeToggle.addEventListener('click', () => {
         if (document.body.classList.toggle('dark')) {
           document.body.classList.remove('dark');
@@ -36,7 +36,7 @@
 
   <title>TW:MF</title>
 </head>
-<body>
+<body class="dark">
   <main class="bg-zinc-200 dark:bg-zinc-900">
     <header class="text-zinc-200">
       <button id="dark-mode-toggle" class="fixed top-24 right-0 inline-block cursor-pointer rounded-l-lg bg-zinc-900 dark:bg-zinc-200 text-zinc-200 dark:text-zinc-900 p-2 text-3xl">
@@ -158,6 +158,24 @@
         </div>
       </div>
       
+      <h2 class="mt-20">Tickets </h2>
+      <table class="mt-5 table w-full border border-zinc-500 border-collapse">
+        <thead class="text-lg font-bold">
+          <td class="border border-zinc-500 p-3">Tickets</td>
+          <td class="border border-zinc-500 p-3">Price</td>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border-zinc-500 border py-2 px-3">Single day ticket</td>
+            <td class="border-zinc-500 border py-2 px-3">$45</td>
+          </tr>
+          <tr>
+            <td class="border-zinc-500 border py-2 px-3">7 day ticket</td>
+            <td class="border-zinc-500 border py-2 px-3">$200</td>
+          </tr>
+        </tbody>
+        <caption class="caption-bottom">Once they're gone, they're gone!</caption>
+      </table>
     </div>
 
   </main>
